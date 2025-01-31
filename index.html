@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandgap Energy Predictor</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Bandgap Energy Predictor</h1>
+    <form id="prediction-form" action="/predict" method="POST">
+        <label for="Cs">Cesium (Cs):</label>
+        <input type="number" id="Cs" name="Cs" step="0.01" placeholder="Enter Cs value" required>
+
+        <label for="FA">Formamidinium (FA):</label>
+        <input type="number" id="FA" name="FA" step="0.01" placeholder="Enter FA value" required>
+
+        <label for="MA">Methylammonium (MA):</label>
+        <input type="number" id="MA" name="MA" step="0.01" placeholder="Enter MA value" required>
+
+        <label for="Cl">Chlorine (Cl):</label>
+        <input type="number" id="Cl" name="Cl" step="0.01" placeholder="Enter Cl value" required>
+
+        <label for="Br">Bromine (Br):</label>
+        <input type="number" id="Br" name="Br" step="0.01" placeholder="Enter Br value" required>
+
+        <label for="I">Iodine (I):</label>
+        <input type="number" id="I" name="I" step="0.01" placeholder="Enter I value" required>
+
+        <label for="model-selection">Select Model:</label>
+        <select id="model-selection" name="model">
+            <option value="Linear Regression">Linear Regression</option>
+            <option value="Random Forest">Random Forest</option>
+            <option value="KNN">KNN</option>
+            <option value="SVR">SVR</option>
+            <option value="ANN">ANN</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <footer>
+        © 2025 Bandgap Energy Predictor | Material Science Solutions
+    </footer>
+</body>
+</html>

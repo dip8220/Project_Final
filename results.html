@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <div id="result-container">
+        <p><strong>Input Values:</strong></p>
+        <ul>
+            <li>Cesium (Cs): {{ Cs }}</li>
+            <li>Formamidinium (FA): {{ FA }}</li>
+            <li>Methylammonium (MA): {{ MA }}</li>
+            <li>Chlorine (Cl): {{ Cl }}</li>
+            <li>Bromine (Br): {{ Br }}</li>
+            <li>Iodine (I): {{ I }}</li>
+        </ul>
+        <p><strong>Selected Model:</strong> {{ model }}</p>
+        <p><strong>Predicted Bandgap Energy:</strong> {{ prediction }}</p>
+    </div>
+    <footer>
+        <a href="/">Predict Again</a>
+    </footer>
+</body>
+</html>
