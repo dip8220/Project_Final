@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ models = {
     "Random Forest": pickle.load(open("random_forest.pkl", "rb")),
     "KNN": pickle.load(open("knn.pkl", "rb")),
     "SVR": pickle.load(open("svr.pkl", "rb")),
-    "ANN": pickle.load(open("ann.pkl", "rb")),
+    "ANN": load_model("ann.h5"),  # Load the ANN model from .h5 file
 }
 
 @app.route('/')

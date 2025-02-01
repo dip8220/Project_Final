@@ -51,7 +51,7 @@ models = {
 for name, model in models.items():
     model.fit(X_train, y_train)
     # Save the trained models
-    with open(f'{name}_model.pkl', 'wb') as f:
+    with open(f'{name}.pkl', 'wb') as f:
         pickle.dump(model, f)
 
 # Train and save the ANN model
@@ -64,7 +64,7 @@ ann.compile(optimizer='adam', loss='mean_squared_error')
 ann.fit(X_train, y_train, epochs=100, batch_size=32, verbose=0)
 
 # Save ANN model (HDF5 format)
-ann.save('ann_model.h5')
+ann.save('ann.h5')
 
 # Print success message
 print("Models and scalers have been trained and saved successfully!")
